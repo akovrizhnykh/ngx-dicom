@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { NgxDicomModule } from '../../projects/ngx-dicom/src/lib/ngx-dicom.module';
+import { NgxDicomModule } from '../../projects/ngx-dicom-lib/src/lib/ngx-dicom.module';
 
 @NgModule({
   declarations: [
