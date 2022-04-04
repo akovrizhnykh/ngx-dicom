@@ -1,24 +1,108 @@
-# NgxDicomLib
+### Angular dicom viewer features
+1. View dicom(.dcm) files
+2. Use [cornerstonejs](https://tools.cornerstonejs.org/ "cornerstonejs") plugins and features
+###Install
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.
+1. `npm install ngx-dicom`
+2. `npm install cornerstone-core`
+3. `npm install cornerstone-math`
+4. `npm install cornerstone-tools`
+5. `npm install cornerstone-wado-image-loader`
+6. `npm install hammerjs`
 
-## Code scaffolding
+###Add scripts to angular.json architect.build.options:
+```json
+"scripts": [
+"./node_modules/hammerjs/hammer.js",
+"./node_modules/cornerstone-math/dist/cornerstoneMath.js",
+"./node_modules/cornerstone-tools/dist/cornerstoneTools.js",
+"./node_modules/cornerstone-wado-image-loader/dist/cornerstoneWADOImageLoader.bundle.min.js",
+"./node_modules/dicom-parser/dist/dicomParser.js"
+]
+```
 
-Run `ng generate component component-name --project ngx-dicom-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-dicom-lib`.
-> Note: Don't forget to add `--project ngx-dicom-lib` or else it will be added to the default project in your `angular.json` file. 
+###Add module:
 
-## Build
+```json
+  imports: [
+    NgxDicomModule,
+	]
+```
 
-Run `ng build ngx-dicom-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+###Config example:
 
-## Publishing
+```json
+config: IDicomConfig = {
+fileUrl: 'http://localhost:4200/assets/0002.DCM',
+tools: [
+{
+name: 'DragProbe',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'Eraser',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'Magnify',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'StackScrollMouseWheel',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Active
+},
+{
+name: 'Rotate',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'Pan',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'ZoomMouseWheel',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'Length',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'Angle',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'FreehandRoi',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+},
+{
+name: 'Wwwc',
+options: { mouseButtonMask: 1 },
+mode: ToolModeEnum.Passive
+}
+],
+classList: 'canvas-container'
+};
+```
+##Add component:
 
-After building your library with `ng build ngx-dicom-lib`, go to the dist folder `cd dist/ngx-dicom-lib` and run `npm publish`.
+```html
+<ngx-dicom [config]="config" (initialized)="viewerProvider = $event"></ngx-dicom>
+```
 
-## Running unit tests
+You can manage features by** viewerProvider**.
 
-Run `ng test ngx-dicom-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Library based on: https://github.com/cornerstonejs/cornerstoneTools
 
-## Further help
+Docs: https://tools.cornerstonejs.org/
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
