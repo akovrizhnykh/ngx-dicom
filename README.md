@@ -2,7 +2,7 @@
 1. View dicom(.dcm) files
 2. Use [cornerstonejs](https://tools.cornerstonejs.org/ "cornerstonejs") plugins and features
 
-###Install
+### Install
 
 1. `npm install ngx-dicom`
 2. `npm install cornerstone-core`
@@ -11,7 +11,7 @@
 5. `npm install cornerstone-wado-image-loader`
 6. `npm install hammerjs`
 
-###Add scripts to angular.json architect.build.options:
+### Add scripts to angular.json architect.build.options:
 ```json
 "scripts": [
 "./node_modules/hammerjs/hammer.js",
@@ -22,7 +22,7 @@
 ]
 ```
 
-###Add module:
+### Add module:
 
 ```json
   imports: [
@@ -30,7 +30,7 @@
 	]
 ```
 
-###Config example:
+### Config example:
 
 ```json
 config: IDicomConfig = {
@@ -95,7 +95,7 @@ mode: ToolModeEnum.Passive
 classList: 'canvas-container'
 };
 ```
-##Add component:
+## Add component:
 
 ```html
 <ngx-dicom [config]="config" (initialized)="viewerProvider = $event"></ngx-dicom>
