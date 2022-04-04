@@ -1,0 +1,43 @@
+<div style="padding: 32px; height: calc(100% - 64px);">
+    <ng-container *ngIf="viewerProvider">
+        <div style="margin-bottom: 16px; display: flex; justify-content: center"
+             *ngIf="viewerProvider.playClip"
+        >
+            <button style="margin-right: 16px"
+                    mat-mini-fab
+                    color="primary"
+                    (click)="viewerProvider.playClip.play(10)"
+            >
+                <mat-icon>play_arrow</mat-icon>
+            </button>
+            <button mat-mini-fab
+                    color="warn"
+                    (click)="viewerProvider.playClip.stop()"
+            >
+                <mat-icon>stop</mat-icon>
+            </button>
+        </div>
+        <div style="margin-bottom: 8px; display: flex; justify-content: center; flex-wrap: wrap;">
+            <button style="margin-right: 8px; margin-bottom: 8px"
+                    mat-raised-button
+                    [color]="isActive(tool) ? 'primary' : undefined"
+                    *ngFor="let tool of config.tools"
+                    (click)="activateTool(tool.name)"
+            >{{tool.name}}</button>
+        </div>
+        <div style="display: flex; justify-content: center; margin-bottom: 16px">
+            <button style="margin-right: 8px"
+                    mat-raised-button
+                    color="accent"
+                    (click)="exportStateToJson()"
+            >Export tools state to JSON file</button>
+            <button mat-raised-button
+                    color="accent"
+                    (click)="saveAs()"
+            >Save as PNG</button>
+        </div>
+    </ng-container>
+    <div style="display: flex; justify-content: center">
+        <ngx-dicom [config]="config" (initialized)="viewerProvider = $event"></ngx-dicom>
+    </div>
+</div>
