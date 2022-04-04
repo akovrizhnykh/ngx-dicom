@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IDicomConfig, ITool, IViewerProvider, ToolModeEnum } from '../../projects/ngx-dicom-lib/src/lib/models';
+import { IDicomConfig, ITool, IViewerProvider, ToolModeEnum } from '../../projects/ngx-dicom/src/lib/models';
 
 @Component({
   selector: 'app-root',
