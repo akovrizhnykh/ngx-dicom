@@ -35,7 +35,8 @@ export class NgxDicomComponent implements AfterViewInit {
   private stack: IStack;
   private provider: IViewerProvider = {
     element: null,
-    cornerstoneTools
+    cornerstoneTools,
+    cornerstone
   };
   private isMultiFrame: boolean;
   private playClipActive: boolean;

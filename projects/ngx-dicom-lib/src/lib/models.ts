@@ -12,6 +12,7 @@ export interface IStack {
 export interface IViewerProvider {
   element: any;
   cornerstoneTools: any;
+  cornerstone: any;
   playClip?: {
     play(frameRate: number): void;
     stop(): void;
