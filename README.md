@@ -104,7 +104,7 @@ config: IDicomConfig = {
 <ngx-dicom [config]="config" (initialized)="viewerProvider = $event"></ngx-dicom>
 ```
 
-You can manage features by** viewerProvider**.
+You can manage features by **viewerProvider**.
 
 Library based on: https://github.com/cornerstonejs/cornerstoneTools
 
