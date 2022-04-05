@@ -1,6 +1,6 @@
 {
   "name": "ngx-dicom",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^13.0.0",
     "@angular/core": "^13.0.0",
@@ -13,5 +13,32 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "homepage": "https://github.com/akovrizhnykh/ngx-dicom",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:akovrizhnykh/ngx-dicom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akovrizhnykh/ngx-dicom/issues"
+  },
+  "keywords": [
+    "ng2-dicom",
+    "ngx-dicom",
+    "ng2",
+    "angular-dicom",
+    "dicom",
+    "angular",
+    "angular2",
+    "angular2-dicom",
+    "ng2dicom",
+    "akovrizhnykh",
+    "dcm",
+    "dicom-viewer"
+  ],
+  "license": "MIT",
+  "description": "Angular dicom viewer",
+  "contributors": [
+    "ngx-dicom"
+  ]
 }
