@@ -8,7 +8,7 @@ import { IDicomConfig, ITool, IViewerProvider, ToolModeEnum } from '../../projec
 })
 export class AppComponent {
   config: IDicomConfig = {
-    fileUrl: 'http://localhost:4200/assets/0002.DCM',
+    fileUrl: `${window.location.origin}/assets/0002.DCM`,
     tools: [
       {
         name: 'DragProbe',
