@@ -7,12 +7,12 @@ https://ngx-dicom.web.app/
 
 ### Install
 
-1. `npm install ngx-dicom`
-2. `npm install cornerstone-core`
-3. `npm install cornerstone-math`
-4. `npm install cornerstone-tools`
-5. `npm install cornerstone-wado-image-loader`
-6. `npm install hammerjs`
+1. `$ npm install ngx-dicom`
+2. `$ npm install cornerstone-core`
+3. `$ npm install cornerstone-math`
+4. `$ npm install cornerstone-tools`
+5. `$ npm install cornerstone-wado-image-loader`
+6. `$ npm install hammerjs`
 
 ### Add scripts to angular.json architect.build.options:
 ```json
