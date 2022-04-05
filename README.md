@@ -27,7 +27,7 @@ https://ngx-dicom.web.app/
 
 ### Add module:
 
-```json
+```typescript
   imports: [
     NgxDicomModule,
 	]
@@ -35,67 +35,67 @@ https://ngx-dicom.web.app/
 
 ### Config example:
 
-```json
+```typescript
 config: IDicomConfig = {
-fileUrl: 'http://localhost:4200/assets/0002.DCM',
-tools: [
-{
-name: 'DragProbe',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'Eraser',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'Magnify',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'StackScrollMouseWheel',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Active
-},
-{
-name: 'Rotate',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'Pan',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'ZoomMouseWheel',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'Length',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'Angle',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'FreehandRoi',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-},
-{
-name: 'Wwwc',
-options: { mouseButtonMask: 1 },
-mode: ToolModeEnum.Passive
-}
-],
-classList: 'canvas-container'
+  fileUrl: 'http://localhost:4200/assets/0002.DCM',
+  tools: [
+    {
+      name: 'DragProbe',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'Eraser',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'Magnify',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'StackScrollMouseWheel',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Active
+    },
+    {
+      name: 'Rotate',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'Pan',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'ZoomMouseWheel',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'Length',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'Angle',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'FreehandRoi',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    },
+    {
+      name: 'Wwwc',
+      options: { mouseButtonMask: 1 },
+      mode: ToolModeEnum.Passive
+    }
+  ],
+  classList: 'canvas-container'
 };
 ```
 ## Add component:
