@@ -2,6 +2,9 @@
 1. View dicom(.dcm) files
 2. Use [cornerstonejs](https://tools.cornerstonejs.org/ "cornerstonejs") plugins and features
 
+### Demo
+https://ngx-dicom.web.app/
+
 ### Install
 
 1. `npm install ngx-dicom`
